@@ -282,11 +282,16 @@ export default function Contact() {
                 <span className="w-2 h-2 rounded-full bg-[#4CAF50] animate-pulse" />
                 <h4 className="text-white font-semibold text-sm">Open to New Opportunities</h4>
               </div>
-              <p className="text-[#8B9EC7] text-xs leading-relaxed mb-4">
-                Currently available for remote paraplanning engagements — both contract and ongoing. I work
-                comfortably within Australian business hours and am familiar with ASIC, FASEA and licensee
-                compliance requirements.
-              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {["Contract", "Ongoing", "AEST hours", "ASIC familiar", "FASEA familiar"].map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-2.5 py-1 rounded-lg bg-white/[0.05] border border-white/[0.08] text-[#8B9EC7] text-[11px] font-medium"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
               <a
                 href="/cv.pdf"
                 download="Nischal_Khatri_CV.pdf"
@@ -306,8 +311,8 @@ export default function Contact() {
               className="p-4 rounded-2xl bg-[#050E1D] border border-white/[0.06]"
             >
               <p className="text-[#8B9EC7] text-xs leading-relaxed">
-                <span className="text-white font-medium">References available upon request</span> — including
-                professional referees from Ready Advice Pty Ltd, Peak Pinnacle Financial Pty Ltd, and IATN Nepal.
+                <span className="text-white font-medium">References available upon request</span> from
+                Ready Advice Pty Ltd, Peak Pinnacle Financial Pty Ltd, and IATN Nepal.
               </p>
             </motion.div>
           </motion.div>

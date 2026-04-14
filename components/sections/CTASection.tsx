@@ -30,12 +30,22 @@ export default function CTASection() {
             <span className="gradient-text">right the first time?</span>
           </h2>
 
-          {/* Sub-headline */}
-          <p className="text-[#8B9EC7] text-lg leading-relaxed mb-10">
-            Whether you need ongoing paraplanning support or help clearing a backlog,
-            I&apos;m available for contract and project-based engagements — fully remote,
-            AEST-compatible, and compliance-ready.
-          </p>
+          {/* Proof pills */}
+          <div className="flex flex-wrap justify-center gap-3 mb-10">
+            {[
+              { value: "Contract or ongoing", icon: "·" },
+              { value: "Fully remote", icon: "·" },
+              { value: "AEST-compatible", icon: "·" },
+              { value: "ASIC-compliant", icon: "·" },
+            ].map((p) => (
+              <span
+                key={p.value}
+                className="px-4 py-2 rounded-full bg-white/[0.05] border border-white/[0.10] text-[#8B9EC7] text-sm font-medium"
+              >
+                {p.value}
+              </span>
+            ))}
+          </div>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">

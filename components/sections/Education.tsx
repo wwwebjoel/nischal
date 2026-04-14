@@ -51,7 +51,7 @@ const certifications = [
     title: "RG 146 Compliance",
     issuer: "Australian Financial Services",
     year: "Current",
-    focus: "Tier 1 — Financial Planning",
+    focus: "Tier 1 · Financial Planning",
     color: "#C9A84C",
   },
 ];

@@ -20,7 +20,7 @@ export default function CaseStudies() {
           badge="Work Samples"
           title="Financial Analysis"
           highlight="Showcase"
-          subtitle="Anonymised case studies demonstrating real-world financial modelling, portfolio construction, and compliance work — the kind of analysis I deliver daily."
+          subtitle="Anonymised case studies demonstrating real-world financial modelling, portfolio construction, and compliance work. This is the analysis I deliver daily."
           centered
         />
         <CaseStudiesPanel />

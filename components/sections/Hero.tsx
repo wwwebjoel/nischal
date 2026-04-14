@@ -74,14 +74,23 @@ export default function Hero() {
               <span className="gold-text">ASIC-ready, every time.</span>
             </motion.p>
 
-            {/* Supporting detail */}
-            <motion.p
-              variants={item}
-              className="text-[#8B9EC7] text-base sm:text-lg leading-relaxed max-w-xl"
-            >
-              2+ years delivering paraplanning for Australian advisory firms — remotely,
-              reliably, and with a 100% compliance record.
-            </motion.p>
+            {/* Inline proof stats */}
+            <motion.div variants={item} className="flex flex-wrap gap-2.5">
+              {[
+                { value: "2+", label: "Years Active" },
+                { value: "50+", label: "SOAs Delivered" },
+                { value: "100%", label: "Compliance Record" },
+                { value: "3", label: "Firms Served" },
+              ].map((s) => (
+                <div
+                  key={s.label}
+                  className="flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white/[0.05] border border-white/[0.08]"
+                >
+                  <span className="font-heading font-bold text-white text-sm">{s.value}</span>
+                  <span className="text-[#8B9EC7] text-xs">{s.label}</span>
+                </div>
+              ))}
+            </motion.div>
 
             {/* CTAs */}
             <motion.div variants={item} className="flex flex-wrap gap-4 pt-1">

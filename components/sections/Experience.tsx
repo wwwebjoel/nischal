@@ -10,7 +10,7 @@ const experiences = [
     company: "Avaya Machine Pvt Ltd",
     client: "Outsourcing for Ready Advice Pty Ltd & Peak Pinnacle Financial Pty Ltd",
     period: "Nov 2022 – Present",
-    location: "Remote — Nepal / Australia",
+    location: "Remote · Nepal / Australia",
     type: "current",
     color: "#4A90E2",
     achievements: [
@@ -35,7 +35,7 @@ const experiences = [
     color: "#C9A84C",
     achievements: [
       "Reduced operational waste by 15% through systematic cost control measures and process optimisation",
-      "Created and maintained detailed revenue and expense reports (weekly, monthly, annual) — improving financial transparency",
+      "Created and maintained detailed revenue and expense reports (weekly, monthly, annual), improving financial transparency",
       "Trained staff on service best practices, resulting in a 25% increase in customer satisfaction scores",
       "Managed inventory, supervised shifts, and ensured strict adherence to health and sanitation regulations",
       "Boosted social media engagement by 30% through targeted content creation and community management",
@@ -69,7 +69,7 @@ export default function Experience() {
           badge="Experience"
           title="Career"
           highlight="Timeline"
-          subtitle="A progressive track record in financial services, operations management, and accounting — building depth in paraplanning since 2022."
+          subtitle="A progressive track record in financial services, operations management, and accounting. Building depth in paraplanning since 2022."
         />
 
         <div className="relative">

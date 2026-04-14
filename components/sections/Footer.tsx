@@ -60,7 +60,7 @@ export default function Footer() {
             >
               Detail-oriented Paraplanner specialising in SOA/ROA preparation,
               financial modelling, and compliance documentation for Australian
-              advisory firms — available for remote collaboration.
+              advisory firms. Available for remote collaboration.
             </motion.p>
             <motion.div
               initial={{ opacity: 0 }}

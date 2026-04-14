@@ -223,7 +223,7 @@ export default function CaseStudiesPanel() {
                 <div className="mb-6">
                   <h3 className="text-white font-bold text-xl mb-1">Portfolio Allocation Strategy</h3>
                   <p className="text-[#8B9EC7] text-sm max-w-lg">
-                    Recommended balanced growth allocation for a risk-moderate client — designed for long-term capital appreciation with diversification across asset classes.
+                    Recommended balanced growth allocation for a risk-moderate client. Designed for long-term capital appreciation with diversification across asset classes.
                   </p>
                 </div>
                 <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -300,7 +300,7 @@ export default function CaseStudiesPanel() {
                 <div className="mb-6">
                   <h3 className="text-white font-bold text-xl mb-1">Superannuation Fund Comparison</h3>
                   <p className="text-[#8B9EC7] text-sm max-w-lg">
-                    Head-to-head performance and fee analysis of four super funds using Irate, Morningstar and Chant West data — guiding members to the optimal fund choice.
+                    Head-to-head performance and fee analysis of four super funds using Irate, Morningstar and Chant West data, guiding members to the optimal fund choice.
                   </p>
                 </div>
                 <ResponsiveContainer width="100%" height={340}>
@@ -333,7 +333,7 @@ export default function CaseStudiesPanel() {
                 <div className="mb-6">
                   <h3 className="text-white font-bold text-xl mb-1">Insurance Coverage Analysis</h3>
                   <p className="text-[#8B9EC7] text-sm max-w-lg">
-                    Comprehensive insurance needs assessment covering Death Cover, TPD, Income Protection and Trauma — benchmarked against recommended coverage levels.
+                    Comprehensive insurance needs assessment covering Death Cover, TPD, Income Protection and Trauma. Benchmarked against recommended coverage levels.
                   </p>
                 </div>
                 <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -378,7 +378,7 @@ export default function CaseStudiesPanel() {
                             ? "Adequate"
                             : ins.A >= 60
                             ? "Review recommended"
-                            : "Underinsured — action required"}
+                            : "Underinsured · action required"}
                         </p>
                       </div>
                     ))}

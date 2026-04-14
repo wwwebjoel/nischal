@@ -1,62 +1,73 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  FileCheck,
-  Clock,
-  Globe,
-  BookOpen,
-  Layers,
-  ShieldCheck,
-} from "lucide-react";
+import { FileCheck, Clock, Globe, BookOpen, Layers, ShieldCheck } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 const strengths = [
   {
     icon: FileCheck,
     title: "ASIC-Ready, Every Time",
-    description:
-      "Zero compliance failures across 50+ SOAs and ROAs. Every document meets ASIC, FASEA, and licensee standards before it reaches your desk.",
+    points: [
+      "Zero compliance failures across 50+ SOAs/ROAs",
+      "Meets ASIC, FASEA and licensee standards",
+      "Reviewed and ready before it reaches your desk",
+    ],
     metric: "100% compliance record",
     color: "#4A90E2",
   },
   {
     icon: Clock,
-    title: "24–48hr Turnaround",
-    description:
-      "Consistent delivery windows on standard SOA/ROA requests. Your advisers stay in front of clients — I handle the documentation efficiently.",
+    title: "24-48hr Turnaround",
+    points: [
+      "Standard SOA/ROA delivered within 24-48 hours",
+      "Clear updates throughout the workflow",
+      "Consistent on deadlines",
+    ],
     metric: "Fast, reliable delivery",
     color: "#C9A84C",
   },
   {
     icon: Globe,
-    title: "AEST-Compatible Remote Work",
-    description:
-      "Based in Nepal but aligned to Australian business hours. Responsive communication, familiar workflows, and no disruption to your practice.",
-    metric: "Available Mon–Fri AEST",
+    title: "AEST-Compatible Remote",
+    points: [
+      "Operates on Australian business hours",
+      "Responsive across email and messaging",
+      "No disruption to existing workflows",
+    ],
+    metric: "Available Mon-Fri AEST",
     color: "#4CAF50",
   },
   {
     icon: BookOpen,
     title: "Full Platform Proficiency",
-    description:
-      "Irate, Morningstar, Chant West, Xplan, DASH, Intelliflo, PlatformPlus AMS — ready to operate in your existing tech stack from day one.",
+    points: [
+      "Irate, Morningstar, Chant West",
+      "Xplan, DASH, Intelliflo",
+      "PlatformPlus AMS",
+    ],
     metric: "7+ platforms",
     color: "#A78BFA",
   },
   {
     icon: Layers,
     title: "End-to-End Paraplanning",
-    description:
-      "From retirement projections and insurance needs analysis to portfolio construction and OFA/FDS lodgements — I cover the full paraplanning lifecycle.",
+    points: [
+      "Retirement projections and cashflow modelling",
+      "Insurance needs analysis and comparisons",
+      "OFA/FDS lodgements and compliance docs",
+    ],
     metric: "2+ years full-cycle",
     color: "#F59E0B",
   },
   {
     icon: ShieldCheck,
     title: "Confidentiality Guaranteed",
-    description:
-      "Strict adherence to privacy obligations and client data protocols. Your clients' information is always handled with the care and discretion it deserves.",
+    points: [
+      "Strict privacy obligations observed",
+      "Secure client data handling at all times",
+      "References available upon request",
+    ],
     metric: "Privacy-first approach",
     color: "#EF4444",
   },
@@ -64,12 +75,12 @@ const strengths = [
 
 const container = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.09 } },
+  visible: { transition: { staggerChildren: 0.08 } },
 };
 
 const cardVariant = {
-  hidden: { opacity: 0, y: 28 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.16, 1, 0.3, 1] } },
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] } },
 };
 
 export default function WhyHireMe() {
@@ -104,13 +115,23 @@ export default function WhyHireMe() {
                 <s.icon size={20} style={{ color: s.color }} />
               </div>
 
-              {/* Content */}
-              <h3 className="text-white font-bold text-base mb-2 leading-snug">
+              {/* Title */}
+              <h3 className="text-white font-bold text-base mb-3 leading-snug">
                 {s.title}
               </h3>
-              <p className="text-[#8B9EC7] text-sm leading-relaxed mb-4">
-                {s.description}
-              </p>
+
+              {/* Data bullets */}
+              <ul className="space-y-1.5 mb-4">
+                {s.points.map((pt) => (
+                  <li key={pt} className="flex items-start gap-2 text-[#8B9EC7] text-xs leading-snug">
+                    <span
+                      className="mt-1.5 w-1 h-1 rounded-full flex-shrink-0"
+                      style={{ background: s.color }}
+                    />
+                    {pt}
+                  </li>
+                ))}
+              </ul>
 
               {/* Metric badge */}
               <span
@@ -123,7 +144,7 @@ export default function WhyHireMe() {
           ))}
         </motion.div>
 
-        {/* Bottom proof bar */}
+        {/* Proof bar */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

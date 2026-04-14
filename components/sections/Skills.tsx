@@ -96,7 +96,7 @@ export default function Skills() {
           badge="Skills & Expertise"
           title="Technical Depth."
           highlight="Broad Tools."
-          subtitle="A comprehensive skill set built for the Australian financial planning landscape — from compliance documentation to complex modelling."
+          subtitle="A comprehensive skill set built for the Australian financial planning landscape: compliance documentation, complex modelling, and everything in between."
         />
 
         <div className="space-y-16">
