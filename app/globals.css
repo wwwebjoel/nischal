@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #050E1D;
+  --bg-secondary: #0A1628;
+  --bg-elevated: #0F1E38;
+  --accent-gold: #C9A84C;
+  --accent-gold-light: #F0D060;
+  --accent-blue: #1E5FBF;
+  --accent-blue-light: #4A90E2;
+  --text-primary: #F0F4FF;
+  --text-secondary: #8B9EC7;
+  --border: rgba(255, 255, 255, 0.07);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #050E1D;
+  color: #F0F4FF;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Custom Scrollbar ─────────────────────────────── */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #050E1D;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E5FBF;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4A90E2;
+}
+
+/* ─── Gradient Text ────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #4A90E2 0%, #C9A84C 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-text {
+  background: linear-gradient(135deg, #C9A84C 0%, #F0D060 50%, #C9A84C 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blue-text {
+  background: linear-gradient(135deg, #4A90E2 0%, #6EB3F7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ─── Glass Morphism ───────────────────────────────── */
+.glass {
+  background: rgba(10, 22, 40, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-light {
+  background: rgba(15, 30, 56, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ─── Gradient Borders ─────────────────────────────── */
+.gradient-border {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(#0A1628, #0A1628) padding-box,
+    linear-gradient(135deg, rgba(74, 144, 226, 0.5), rgba(201, 168, 76, 0.3)) border-box;
+}
+
+.gradient-border-blue {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(#0A1628, #0A1628) padding-box,
+    linear-gradient(135deg, rgba(74, 144, 226, 0.6), rgba(74, 144, 226, 0.1)) border-box;
+}
+
+/* ─── Dot Grid Background ──────────────────────────── */
+.dot-grid {
+  background-image: radial-gradient(rgba(74, 144, 226, 0.12) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* ─── Section Padding ──────────────────────────────── */
+.section-pad {
+  @apply py-24 md:py-32;
+}
+
+/* ─── Container ─────────────────────────────────────── */
+.container-wide {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* ─── Recharts Dark Theme Overrides ───────────────── */
+.recharts-tooltip-wrapper .recharts-default-tooltip {
+  background: #0F1E38 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+  color: #F0F4FF !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+}
+
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: rgba(255, 255, 255, 0.04) !important;
+}
+
+/* ─── Shimmer Loading ──────────────────────────────── */
+.shimmer {
+  background: linear-gradient(90deg, #0A1628 25%, #0F1E38 50%, #0A1628 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ─── Selection ─────────────────────────────────────── */
+::selection {
+  background: rgba(74, 144, 226, 0.3);
+  color: #F0F4FF;
+}
