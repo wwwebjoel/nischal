@@ -19,71 +19,90 @@ const container = {
 };
 
 const item = {
-  hidden: { opacity: 0, y: 24 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.16, 1, 0.3, 1] } },
 };
 
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-[#050E1D]">
-      {/* Background — CSS-only, no JS scroll listeners */}
-      <div className="absolute inset-0 dot-grid opacity-60" />
+      {/* Background */}
+      <div className="absolute inset-0 dot-grid opacity-50" />
       <div className="hero-orb-blue" />
       <div className="hero-orb-gold" />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16">
-        <div className="grid lg:grid-cols-[1fr_420px] xl:grid-cols-[1fr_460px] gap-12 xl:gap-16 items-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
+        <div className="grid lg:grid-cols-[1fr_420px] xl:grid-cols-[1fr_460px] gap-14 xl:gap-20 items-center">
 
-          {/* Left — Text */}
+          {/* ── Left: Text ─────────────────────────────── */}
           <motion.div
             variants={container}
             initial="hidden"
             animate="visible"
-            className="space-y-6"
+            className="space-y-7"
           >
-            {/* Availability badge */}
+            {/* Availability pill */}
             <motion.div variants={item}>
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#4A90E2]/10 border border-[#4A90E2]/25 text-[#4A90E2] text-xs font-semibold uppercase tracking-wider">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#4A90E2]/10 border border-[#4A90E2]/20 text-[#4A90E2] text-xs font-semibold uppercase tracking-wider">
                 <span className="w-2 h-2 rounded-full bg-[#4CAF50] animate-pulse" />
                 Available for Remote Collaboration · Australia &amp; NZ
               </span>
             </motion.div>
 
-            {/* Name + Role */}
-            <motion.div variants={item} className="space-y-2">
-              <h1 className="text-5xl sm:text-6xl xl:text-7xl font-bold text-white leading-[1.05] tracking-tight sm:whitespace-nowrap">
-                Nischal Khatri
+            {/* Kicker + Name */}
+            <motion.div variants={item} className="space-y-3">
+              {/* Role kicker above the name */}
+              <div className="flex items-center gap-3">
+                <span className="block h-px w-8 bg-gradient-to-r from-[#C9A84C] to-transparent" />
+                <span className="kicker">Paraplanner · Financial Expert · RG&nbsp;146</span>
+              </div>
+
+              {/* Name — Space Grotesk, dominant */}
+              <h1 className="font-heading text-[clamp(3rem,8vw,5.5rem)] font-bold text-white leading-[0.95] tracking-[-0.03em] sm:whitespace-nowrap">
+                Nischal{" "}
+                <span className="relative inline-block">
+                  Khatri
+                  {/* Signature gold underline */}
+                  <span
+                    className="absolute -bottom-1 left-0 h-[3px] w-full rounded-full"
+                    style={{ background: "linear-gradient(90deg, #C9A84C, #4A90E2)" }}
+                  />
+                </span>
               </h1>
-              <p className="text-xl sm:text-2xl font-semibold leading-snug sm:whitespace-nowrap">
-                <span className="gradient-text">Expert Paraplanner</span>
-                <span className="text-[#8B9EC7]"> for Australian Advisory Firms</span>
-              </p>
             </motion.div>
 
-            {/* Value proposition — specific, not generic */}
+            {/* Bold one-liner tagline */}
+            <motion.p
+              variants={item}
+              className="text-white/90 text-xl sm:text-2xl font-semibold leading-snug max-w-lg"
+            >
+              Compliant SOAs. Precise financial models.{" "}
+              <span className="gold-text">ASIC-ready, every time.</span>
+            </motion.p>
+
+            {/* Supporting detail */}
             <motion.p
               variants={item}
               className="text-[#8B9EC7] text-base sm:text-lg leading-relaxed max-w-xl"
             >
-              I deliver compliant, adviser-ready SOAs, financial models, and insurance
-              analyses — remotely, reliably, and ready for ASIC review. Trusted by
-              Australian practices since 2022 with a 100% compliance record.
+              2+ years delivering paraplanning for Australian advisory firms — remotely,
+              reliably, and with a 100% compliance record.
             </motion.p>
 
             {/* CTAs */}
-            <motion.div variants={item} className="flex flex-wrap gap-4 pt-2">
+            <motion.div variants={item} className="flex flex-wrap gap-4 pt-1">
               <a
                 href="/cv.pdf"
                 download="Nischal_Khatri_CV.pdf"
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-gradient-to-r from-[#1E5FBF] to-[#4A90E2] rounded-xl text-white font-semibold text-sm shadow-[0_0_30px_rgba(74,144,226,0.35)] hover:shadow-[0_0_42px_rgba(74,144,226,0.55)] hover:-translate-y-0.5 transition-all duration-200"
+                className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-gradient-to-r from-[#1E5FBF] to-[#4A90E2] rounded-xl text-white font-semibold text-sm shadow-[0_0_32px_rgba(74,144,226,0.4)] hover:shadow-[0_0_44px_rgba(74,144,226,0.6)] hover:-translate-y-0.5 transition-all duration-200"
               >
                 <Download size={16} />
                 Download CV
               </a>
               <button
                 onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl border border-white/15 text-white font-semibold text-sm hover:bg-white/[0.06] hover:border-white/25 hover:-translate-y-0.5 transition-all duration-200"
+                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl border border-white/[0.12] text-white font-semibold text-sm hover:bg-white/[0.06] hover:border-white/25 hover:-translate-y-0.5 transition-all duration-200"
               >
                 <Mail size={16} />
                 Get in Touch
@@ -91,15 +110,13 @@ export default function Hero() {
             </motion.div>
 
             {/* Social proof */}
-            <motion.div variants={item} className="pt-4">
-              <p className="text-[#8B9EC7] text-xs uppercase tracking-widest font-medium mb-3">
-                Trusted by Australian advisory firms
-              </p>
-              <div className="flex flex-wrap gap-3">
+            <motion.div variants={item} className="pt-1">
+              <p className="kicker mb-3">Trusted by</p>
+              <div className="flex flex-wrap gap-2.5">
                 {["Ready Advice Pty Ltd", "Peak Pinnacle Financial Pty Ltd"].map((firm) => (
                   <span
                     key={firm}
-                    className="px-3 py-1.5 rounded-lg bg-white/[0.04] border border-white/[0.08] text-[#8B9EC7] text-xs font-medium"
+                    className="px-3 py-1.5 rounded-lg bg-white/[0.04] border border-white/[0.07] text-[#8B9EC7] text-xs font-medium hover:border-white/[0.14] hover:text-white transition-colors"
                   >
                     {firm}
                   </span>
@@ -108,21 +125,23 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Right — Floating Dashboard Card */}
+          {/* ── Right: Floating Dashboard Card ─────────── */}
           <div className="hidden lg:flex justify-center items-center">
             <div className="relative w-full max-w-md">
               <motion.div
                 initial={{ opacity: 0, x: 40, scale: 0.95 }}
                 animate={{ opacity: 1, x: 0, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                className="relative gradient-border rounded-2xl p-5 shadow-[0_24px_80px_rgba(0,0,0,0.5)]"
-                style={{ background: "rgba(10,22,40,0.92)" }}
+                className="relative gradient-border rounded-2xl p-5 shadow-[0_32px_80px_rgba(0,0,0,0.55)]"
+                style={{ background: "rgba(10,22,40,0.94)" }}
               >
-                {/* CSS float animation — no Framer Motion loop */}
                 <div className="card-float">
+                  {/* Card header */}
                   <div className="flex items-center justify-between mb-4">
                     <div>
-                      <p className="text-white font-semibold text-sm">Portfolio Growth Model</p>
+                      <p className="text-white font-heading font-semibold text-sm tracking-tight">
+                        Portfolio Growth Model
+                      </p>
                       <p className="text-[#8B9EC7] text-xs mt-0.5">12-month projection analysis</p>
                     </div>
                     <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#4CAF50]/10 border border-[#4CAF50]/20">
@@ -131,6 +150,7 @@ export default function Hero() {
                     </div>
                   </div>
 
+                  {/* SVG Chart */}
                   <div className="rounded-xl overflow-hidden bg-[#040C18] p-3 mb-4">
                     <svg viewBox="0 0 300 100" className="w-full h-28" preserveAspectRatio="none">
                       <defs>
@@ -181,6 +201,7 @@ export default function Hero() {
                     </svg>
                   </div>
 
+                  {/* Stats row */}
                   <div className="grid grid-cols-3 gap-2">
                     {[
                       { label: "YTD Return", value: "+18.4%", color: "#4CAF50" },
@@ -206,31 +227,26 @@ export default function Hero() {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 1.4 + i * 0.2, type: "spring", stiffness: 200 }}
                   className={`absolute glass rounded-xl px-3 py-2 flex items-center gap-2 shadow-xl border border-white/[0.08] ${
-                    i === 0
-                      ? "-top-5 -right-6"
-                      : i === 1
-                      ? "-bottom-5 -left-6"
-                      : "top-1/2 -right-8 -translate-y-1/2"
+                    i === 0 ? "-top-5 -right-6" : i === 1 ? "-bottom-5 -left-6" : "top-1/2 -right-8 -translate-y-1/2"
                   }`}
                 >
                   <badge.icon size={13} style={{ color: badge.color }} />
-                  <span className="text-white text-xs font-medium whitespace-nowrap">
-                    {badge.label}
-                  </span>
+                  <span className="text-white text-xs font-medium whitespace-nowrap">{badge.label}</span>
                 </motion.div>
               ))}
             </div>
           </div>
+
         </div>
       </div>
 
-      {/* Scroll indicator — CSS bounce, no Framer Motion */}
+      {/* Scroll indicator */}
       <button
         onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#8B9EC7] hover:text-white transition-colors"
         aria-label="Scroll to about section"
       >
-        <span className="text-xs uppercase tracking-widest font-medium">Scroll</span>
+        <span className="kicker">Scroll</span>
         <ChevronDown size={20} className="animate-bounce" />
       </button>
 

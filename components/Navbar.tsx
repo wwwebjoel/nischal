@@ -62,15 +62,26 @@ export default function Navbar() {
             <motion.button
               onClick={() => scrollTo("#home")}
               className="flex items-center gap-3 group"
-              whileHover={{ scale: 1.03 }}
+              whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
             >
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#1E5FBF] to-[#C9A84C] flex items-center justify-center shadow-[0_0_20px_rgba(30,95,191,0.5)] group-hover:shadow-[0_0_30px_rgba(74,144,226,0.6)] transition-shadow">
-                <span className="text-white font-bold text-sm tracking-tight">NK</span>
+              {/* Brand mark — gradient border, dark fill, heading font */}
+              <div className="relative w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+                style={{
+                  background: "linear-gradient(#0A1628, #0A1628) padding-box, linear-gradient(135deg, #4A90E2, #C9A84C) border-box",
+                  border: "1.5px solid transparent",
+                  boxShadow: "0 0 18px rgba(74,144,226,0.25)",
+                }}
+              >
+                <span className="font-heading font-bold text-sm tracking-[-0.03em] text-white">
+                  NK
+                </span>
               </div>
               <div className="hidden sm:block">
-                <p className="text-white font-semibold text-sm leading-tight">Nischal Khatri</p>
-                <p className="text-[#8B9EC7] text-xs">Paraplanner</p>
+                <p className="font-heading font-semibold text-sm leading-tight text-white tracking-[-0.02em]">
+                  Nischal Khatri
+                </p>
+                <p className="text-[#8B9EC7] text-[11px] font-medium tracking-wide">Paraplanner</p>
               </div>
             </motion.button>
 

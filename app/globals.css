@@ -34,6 +34,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ─── Heading Font — Space Grotesk ─────────────────── */
+/* Applied globally to all headings for brand consistency */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading), var(--font-inter), system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
 /* ─── Custom Scrollbar ─────────────────────────────── */
 ::-webkit-scrollbar {
   width: 5px;
@@ -51,24 +58,35 @@ body {
 
 /* ─── Gradient Text ────────────────────────────────── */
 .gradient-text {
-  background: linear-gradient(135deg, #4A90E2 0%, #C9A84C 100%);
+  background: linear-gradient(120deg, #6EB3F7 0%, #C9A84C 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+/* Signature gold — the brand's primary accent color */
 .gold-text {
-  background: linear-gradient(135deg, #C9A84C 0%, #F0D060 50%, #C9A84C 100%);
+  background: linear-gradient(120deg, #C9A84C 0%, #F0D060 60%, #C9A84C 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .blue-text {
-  background: linear-gradient(135deg, #4A90E2 0%, #6EB3F7 100%);
+  background: linear-gradient(120deg, #4A90E2 0%, #6EB3F7 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* ─── Kicker / Pre-title Label ─────────────────────── */
+.kicker {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-secondary);
 }
 
 /* ─── Glass Morphism ───────────────────────────────── */

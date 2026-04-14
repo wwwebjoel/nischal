@@ -34,12 +34,21 @@ export default function Footer() {
               viewport={{ once: true }}
               className="flex items-center gap-3 mb-4"
             >
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#1E5FBF] to-[#C9A84C] flex items-center justify-center shadow-[0_0_20px_rgba(30,95,191,0.4)]">
-                <span className="text-white font-bold text-sm">NK</span>
+              <div
+                className="relative w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+                style={{
+                  background: "linear-gradient(#0A1628, #0A1628) padding-box, linear-gradient(135deg, #4A90E2, #C9A84C) border-box",
+                  border: "1.5px solid transparent",
+                  boxShadow: "0 0 16px rgba(74,144,226,0.2)",
+                }}
+              >
+                <span className="font-heading font-bold text-sm tracking-[-0.03em] text-white">NK</span>
               </div>
               <div>
-                <p className="text-white font-bold text-base">Nischal Khatri</p>
-                <p className="text-[#8B9EC7] text-xs">Paraplanner & Financial Planning Expert</p>
+                <p className="font-heading font-semibold text-base text-white tracking-[-0.02em]">
+                  Nischal Khatri
+                </p>
+                <p className="text-[#8B9EC7] text-xs">Paraplanner &amp; Financial Planning Expert</p>
               </div>
             </motion.div>
             <motion.p

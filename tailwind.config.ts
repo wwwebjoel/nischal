@@ -10,6 +10,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],
+        heading: ["var(--font-heading)", "var(--font-inter)", "sans-serif"],
       },
       colors: {
         "brand-primary": "#050E1D",
