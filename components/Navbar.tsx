@@ -6,10 +6,10 @@ import { Menu, X, Download } from "lucide-react";
 
 const navLinks = [
   { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
+  { href: "#why-hire-me", label: "Why Me" },
+  { href: "#process", label: "Process" },
   { href: "#experience", label: "Experience" },
   { href: "#portfolio", label: "Portfolio" },
-  { href: "#education", label: "Education" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -23,7 +23,7 @@ export default function Navbar() {
       setScrolled(window.scrollY > 60);
 
       // Active section detection
-      const sections = ["home", "about", "skills", "experience", "portfolio", "education", "contact"];
+      const sections = ["home", "about", "why-hire-me", "process", "skills", "experience", "portfolio", "education", "contact"];
       for (const id of sections.reverse()) {
         const el = document.getElementById(id);
         if (el && window.scrollY >= el.offsetTop - 120) {

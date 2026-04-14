@@ -57,14 +57,16 @@ export default function Hero() {
               </h1>
             </motion.div>
 
-            {/* Bold one-liner tagline */}
-            <motion.p
-              variants={item}
-              className="text-white/90 text-xl sm:text-2xl font-semibold leading-snug max-w-lg"
-            >
-              Compliant SOAs. Precise financial models.{" "}
-              <span className="gold-text">ASIC-ready, every time.</span>
-            </motion.p>
+            {/* Outcome-driven tagline */}
+            <motion.div variants={item} className="space-y-1">
+              <p className="text-white/90 text-xl sm:text-2xl font-semibold leading-snug max-w-lg">
+                Your advisers close clients.{" "}
+                <span className="text-[#8B9EC7] font-medium">I handle the paperwork.</span>
+              </p>
+              <p className="text-white/90 text-xl sm:text-2xl font-semibold leading-snug">
+                <span className="gold-text">ASIC-ready, every time.</span>
+              </p>
+            </motion.div>
 
             {/* Inline proof stats */}
             <motion.div variants={item} className="flex flex-wrap gap-2.5">

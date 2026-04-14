@@ -3,6 +3,7 @@ import Hero from "@/components/sections/Hero";
 import Stats from "@/components/sections/Stats";
 import About from "@/components/sections/About";
 import WhyHireMe from "@/components/sections/WhyHireMe";
+import Process from "@/components/sections/Process";
 import Skills from "@/components/sections/Skills";
 import Experience from "@/components/sections/Experience";
 import CaseStudies from "@/components/sections/CaseStudies";
@@ -19,6 +20,7 @@ export default function Home() {
       <Stats />
       <About />
       <WhyHireMe />
+      <Process />
       <Skills />
       <Experience />
       <CaseStudies />
