@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, ArrowUp, Heart } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowUp } from "lucide-react";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -137,15 +137,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-6 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#8B9EC7]">
-          <p>
-            © {new Date().getFullYear()} Nischal Khatri. All rights reserved.
-          </p>
-          <p className="flex items-center gap-1.5">
-            Built with
-            <Heart size={11} className="text-red-400" />
-            for Australian financial advisers
-          </p>
+        <div className="mt-12 pt-6 border-t border-white/[0.06] flex items-center justify-center text-xs text-[#8B9EC7]">
+          <p>© {new Date().getFullYear()} Nischal Khatri. All rights reserved.</p>
         </div>
       </div>
     </footer>
