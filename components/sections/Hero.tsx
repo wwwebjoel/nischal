@@ -55,11 +55,9 @@ export default function Hero() {
               <h1 className="text-5xl sm:text-6xl xl:text-7xl font-bold text-white leading-[1.05] tracking-tight sm:whitespace-nowrap">
                 Nischal Khatri
               </h1>
-              <p className="text-xl sm:text-2xl font-semibold leading-snug">
+              <p className="text-xl sm:text-2xl font-semibold leading-snug sm:whitespace-nowrap">
                 <span className="gradient-text">Expert Paraplanner</span>
-                <span className="text-[#8B9EC7]"> for Australian</span>
-                <br />
-                <span className="text-[#8B9EC7]">Advisory Firms</span>
+                <span className="text-[#8B9EC7]"> for Australian Advisory Firms</span>
               </p>
             </motion.div>
 
