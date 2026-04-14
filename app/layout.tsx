@@ -6,31 +6,54 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
-  title: "Nischal Khatri | Paraplanner & Financial Planning Expert",
+  title: "Nischal Khatri | Expert Paraplanner for Australian Advisory Firms",
   description:
-    "Expert paraplanner with 2+ years specialising in SOA/ROA preparation, financial modelling, insurance analysis, and superannuation. RG 146 compliant and available for remote collaboration with Australian advisory firms.",
-  keywords:
-    "paraplanner, financial planning, SOA, ROA, superannuation, SMSF, insurance analysis, financial modelling, RG 146, Australia, remote paraplanner, Nepal",
+    "Expert paraplanner with 2+ years delivering compliant SOAs, ROAs, financial modelling, insurance analysis, and superannuation strategies for Australian advisory firms. RG 146 compliant. Available remotely.",
+  keywords: [
+    "paraplanner",
+    "financial planning",
+    "SOA preparation",
+    "ROA preparation",
+    "superannuation",
+    "SMSF",
+    "insurance analysis",
+    "financial modelling",
+    "RG 146",
+    "Australia",
+    "remote paraplanner",
+    "ASIC compliance",
+    "Irate",
+    "Morningstar",
+    "Xplan",
+    "Chant West",
+  ],
   authors: [{ name: "Nischal Khatri", url: "mailto:nischal.khatry@outlook.com" }],
   openGraph: {
-    title: "Nischal Khatri | Paraplanner & Financial Planning Expert",
+    title: "Nischal Khatri | Expert Paraplanner",
     description:
-      "Expert paraplanning services for Australian financial advisers — SOA/ROA, financial modelling, insurance analysis, superannuation.",
+      "2+ years delivering compliant SOAs, financial modelling, and insurance analysis for Australian advisory firms — remotely, reliably, and ASIC-ready.",
     type: "website",
     locale: "en_AU",
   },
   twitter: {
     card: "summary_large_image",
     title: "Nischal Khatri | Paraplanner",
-    description: "Expert paraplanning for Australian advisory firms.",
+    description:
+      "Expert paraplanning for Australian advisory firms — SOA/ROA, financial modelling, insurance analysis.",
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
+  category: "Financial Services",
 };
 
 export default function RootLayout({
@@ -40,6 +63,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
       <body className="font-sans antialiased bg-[#050E1D] text-[#F0F4FF]">
         {children}
       </body>
