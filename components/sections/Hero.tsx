@@ -61,14 +61,7 @@ export default function Hero() {
               {/* Name — Space Grotesk, dominant */}
               <h1 className="font-heading text-[clamp(3rem,8vw,5.5rem)] font-bold text-white leading-[0.95] tracking-[-0.03em] sm:whitespace-nowrap">
                 Nischal{" "}
-                <span className="relative inline-block">
-                  Khatri
-                  {/* Signature gold underline */}
-                  <span
-                    className="absolute -bottom-1 left-0 h-[3px] w-full rounded-full"
-                    style={{ background: "linear-gradient(90deg, #C9A84C, #4A90E2)" }}
-                  />
-                </span>
+                Khatri
               </h1>
             </motion.div>
 
