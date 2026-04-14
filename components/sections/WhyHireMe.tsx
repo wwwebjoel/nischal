@@ -73,15 +73,6 @@ const strengths = [
   },
 ];
 
-const container = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.08 } },
-};
-
-const cardVariant = {
-  hidden: { opacity: 0, y: 24 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] } },
-};
 
 export default function WhyHireMe() {
   return (
@@ -94,17 +85,14 @@ export default function WhyHireMe() {
           subtitle="Six concrete reasons Australian advisory practices trust me with their most important client documents."
         />
 
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-60px" }}
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
-        >
-          {strengths.map((s) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {strengths.map((s, i) => (
             <motion.div
               key={s.title}
-              variants={cardVariant}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.5, delay: i * 0.07, ease: [0.16, 1, 0.3, 1] }}
               className="why-card group p-6 rounded-2xl bg-[#0A1628] border border-white/[0.06] hover:border-white/[0.13]"
             >
               {/* Icon */}
@@ -142,7 +130,7 @@ export default function WhyHireMe() {
               </span>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Proof bar */}
         <motion.div
