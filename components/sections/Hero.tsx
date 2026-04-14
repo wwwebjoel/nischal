@@ -52,10 +52,8 @@ export default function Hero() {
 
             {/* Name + Role */}
             <motion.div variants={item} className="space-y-2">
-              <h1 className="text-5xl sm:text-6xl xl:text-7xl font-bold text-white leading-[1.05] tracking-tight">
-                Nischal
-                <br />
-                Khatri
+              <h1 className="text-5xl sm:text-6xl xl:text-7xl font-bold text-white leading-[1.05] tracking-tight sm:whitespace-nowrap">
+                Nischal Khatri
               </h1>
               <p className="text-xl sm:text-2xl font-semibold leading-snug">
                 <span className="gradient-text">Expert Paraplanner</span>
