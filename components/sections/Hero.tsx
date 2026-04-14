@@ -42,14 +42,6 @@ export default function Hero() {
             animate="visible"
             className="space-y-7"
           >
-            {/* Availability pill */}
-            <motion.div variants={item}>
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#4A90E2]/10 border border-[#4A90E2]/20 text-[#4A90E2] text-xs font-semibold uppercase tracking-wider">
-                <span className="w-2 h-2 rounded-full bg-[#4CAF50] animate-pulse" />
-                Available for Remote Collaboration · Australia &amp; NZ
-              </span>
-            </motion.div>
-
             {/* Kicker + Name */}
             <motion.div variants={item} className="space-y-3">
               {/* Role kicker above the name */}
