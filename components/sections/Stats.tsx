@@ -7,15 +7,15 @@ import { Clock, FileText, Building2, ShieldCheck } from "lucide-react";
 const stats = [
   {
     icon: FileText,
-    value: 50,
-    suffix: "+",
+    value: 10,
+    suffix: "k+",
     label: "SOAs & ROAs",
     sub: "Prepared and delivered",
     color: "#4A90E2",
   },
   {
     icon: Clock,
-    value: 2,
+    value: 3,
     suffix: "+",
     label: "Years Active",
     sub: "Since November 2022",
@@ -23,7 +23,7 @@ const stats = [
   },
   {
     icon: Building2,
-    value: 3,
+    value: 7,
     suffix: "",
     label: "Firms Served",
     sub: "Across Australia",

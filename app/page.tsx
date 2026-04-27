@@ -1,12 +1,16 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/sections/Hero";
 import Stats from "@/components/sections/Stats";
+import OffshoreParaplanning from "@/components/sections/OffshoreParaplanning";
 import About from "@/components/sections/About";
 import WhyHireMe from "@/components/sections/WhyHireMe";
+import Services from "@/components/sections/Services";
 import Process from "@/components/sections/Process";
 import Skills from "@/components/sections/Skills";
 import Experience from "@/components/sections/Experience";
 import CaseStudies from "@/components/sections/CaseStudies";
+import Testimonials from "@/components/sections/Testimonials";
+import FAQ from "@/components/sections/FAQ";
 import Education from "@/components/sections/Education";
 import CTASection from "@/components/sections/CTASection";
 import Contact from "@/components/sections/Contact";
@@ -18,12 +22,16 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Stats />
+      <OffshoreParaplanning />
       <About />
       <WhyHireMe />
+      <Services />
       <Process />
       <Skills />
       <Experience />
       <CaseStudies />
+      <Testimonials />
+      <FAQ />
       <Education />
       <CTASection />
       <Contact />

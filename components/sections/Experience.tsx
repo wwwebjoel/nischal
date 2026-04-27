@@ -7,8 +7,8 @@ import SectionHeading from "@/components/ui/SectionHeading";
 const experiences = [
   {
     role: "Paraplanner",
-    company: "Avaya Machine Pvt Ltd",
-    client: "Outsourcing for Ready Advice Pty Ltd & Peak Pinnacle Financial Pty Ltd",
+    company: "Contract Paraplanner",
+    client: "Ready Advice Pty Ltd & Peak Pinnacle Financial Pty Ltd",
     period: "Nov 2022 – Present",
     location: "Remote · Nepal / Australia",
     type: "current",

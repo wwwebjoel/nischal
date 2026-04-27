@@ -65,14 +65,13 @@ export default function CTASection() {
               Let&apos;s Work Together
               <ArrowRight size={16} />
             </a>
-            <a
-              href="/cv.pdf"
-              download="Nischal_Khatri_CV.pdf"
-              className="inline-flex items-center gap-2.5 px-7 py-4 rounded-xl border border-white/15 text-white font-semibold text-base hover:bg-white/[0.06] hover:border-white/25 hover:-translate-y-1 transition-all duration-200"
+            <span
+              title="CV update in progress"
+              className="inline-flex items-center gap-2.5 px-7 py-4 rounded-xl border border-white/[0.07] text-white/30 font-semibold text-base cursor-not-allowed select-none"
             >
               <Download size={18} />
-              Download CV
-            </a>
+              CV Coming Soon
+            </span>
           </div>
 
           {/* Contact details */}

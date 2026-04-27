@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import { Download, Mail, ChevronDown, TrendingUp, Shield, CheckCircle, BarChart2 } from "lucide-react";
 
 const floatingBadges = [
-  { icon: CheckCircle, label: "RG 146 Compliant", color: "#4CAF50" },
+  { icon: CheckCircle, label: "Pursuing RG 146", color: "#C9A84C" },
   { icon: Shield, label: "ASIC Compliance", color: "#4A90E2" },
-  { icon: BarChart2, label: "50+ SOAs Prepared", color: "#C9A84C" },
+  { icon: BarChart2, label: "10,000+ SOAs Prepared", color: "#4CAF50" },
 ];
 
 const chartPath = "M0,90 C30,82 50,68 80,62 C110,56 125,72 155,56 C185,40 205,36 232,21 C259,6 278,12 300,7";
@@ -47,7 +47,7 @@ export default function Hero() {
               {/* Role kicker above the name */}
               <div className="flex items-center gap-3">
                 <span className="block h-px w-8 bg-gradient-to-r from-[#C9A84C] to-transparent" />
-                <span className="kicker">Paraplanner · Financial Expert · RG&nbsp;146</span>
+                <span className="kicker">Paraplanner · Financial Expert</span>
               </div>
 
               {/* Name — Space Grotesk, dominant */}
@@ -71,10 +71,10 @@ export default function Hero() {
             {/* Inline proof stats */}
             <motion.div variants={item} className="flex flex-wrap gap-2.5">
               {[
-                { value: "2+", label: "Years Active" },
-                { value: "50+", label: "SOAs Delivered" },
+                { value: "3+", label: "Years Active" },
+                { value: "10k+", label: "SOAs Delivered" },
                 { value: "100%", label: "Compliance Record" },
-                { value: "3", label: "Firms Served" },
+                { value: "7", label: "Firms Served" },
               ].map((s) => (
                 <div
                   key={s.label}
@@ -88,14 +88,13 @@ export default function Hero() {
 
             {/* CTAs */}
             <motion.div variants={item} className="flex flex-wrap gap-4 pt-1">
-              <a
-                href="/cv.pdf"
-                download="Nischal_Khatri_CV.pdf"
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-gradient-to-r from-[#1E5FBF] to-[#4A90E2] rounded-xl text-white font-semibold text-sm shadow-[0_0_32px_rgba(74,144,226,0.4)] hover:shadow-[0_0_44px_rgba(74,144,226,0.6)] hover:-translate-y-0.5 transition-all duration-200"
+              <span
+                title="CV update in progress"
+                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl text-white/40 font-semibold text-sm border border-white/[0.08] bg-white/[0.02] cursor-not-allowed select-none"
               >
                 <Download size={16} />
-                Download CV
-              </a>
+                CV Coming Soon
+              </span>
               <button
                 onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
                 className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl border border-white/[0.12] text-white font-semibold text-sm hover:bg-white/[0.06] hover:border-white/25 hover:-translate-y-0.5 transition-all duration-200"

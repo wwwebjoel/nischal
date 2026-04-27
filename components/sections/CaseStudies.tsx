@@ -17,9 +17,9 @@ export default function CaseStudies() {
     <section id="portfolio" className="section-pad bg-[#0A1628]">
       <div className="container-wide">
         <SectionHeading
-          badge="Work Samples"
-          title="Financial Analysis"
-          highlight="Showcase"
+          badge="Sample Work"
+          title="Featured"
+          highlight="Work"
           subtitle="Anonymised case studies demonstrating real-world financial modelling, portfolio construction, and compliance work. This is the analysis I deliver daily."
           centered
         />

@@ -1,78 +1,96 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FileCheck, Clock, Globe, BookOpen, Layers, ShieldCheck } from "lucide-react";
+import {
+  FileCheck,
+  Shield,
+  Lock,
+  Zap,
+  ShieldCheck,
+  Users,
+  Globe,
+} from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 const strengths = [
   {
     icon: FileCheck,
-    title: "ASIC-Ready, Every Time",
+    title: "Every Document Quality-Reviewed",
     points: [
-      "Zero compliance failures across 50+ SOAs/ROAs",
-      "Meets ASIC, FASEA and licensee standards",
-      "Reviewed and ready before it reaches your desk",
+      "Strict procedures ensure the highest industry standards",
+      "All documents reviewed before leaving my desk",
+      "Zero audit failures across all work delivered",
     ],
-    metric: "100% compliance record",
+    metric: "100% audit pass rate",
     color: "#4A90E2",
   },
   {
-    icon: Clock,
-    title: "24-48hr Turnaround",
+    icon: Shield,
+    title: "Requests Managed via Secure Portal",
     points: [
-      "Standard SOA/ROA delivered within 24-48 hours",
-      "Clear updates throughout the workflow",
-      "Consistent on deadlines",
+      "Submit requests and monitor progress with ease",
+      "Always available on the phone or message",
+      "Communication stays clear and centralised",
     ],
-    metric: "Fast, reliable delivery",
+    metric: "Transparent workflow",
     color: "#C9A84C",
   },
   {
-    icon: Globe,
-    title: "AEST-Compatible Remote",
+    icon: Lock,
+    title: "Data Protection Prioritised",
     points: [
-      "Operates on Australian business hours",
-      "Responsive across email and messaging",
-      "No disruption to existing workflows",
+      "MFA-protected access at all times",
+      "SharePoint security for all client data",
+      "Additional security measures as standard",
     ],
-    metric: "Available Mon-Fri AEST",
+    metric: "MFA + SharePoint security",
     color: "#4CAF50",
   },
   {
-    icon: BookOpen,
-    title: "Full Platform Proficiency",
+    icon: Zap,
+    title: "No Minimum Request Requirements",
     points: [
-      "Irate, Morningstar, Chant West",
-      "Xplan, DASH, Intelliflo",
-      "PlatformPlus AMS",
+      "Pay only for the paraplanning services you need",
+      "No lock-in contracts or volume minimums",
+      "Flexible engagement entirely on your terms",
     ],
-    metric: "7+ platforms",
+    metric: "Pay as you go",
     color: "#A78BFA",
   },
   {
-    icon: Layers,
-    title: "End-to-End Paraplanning",
+    icon: ShieldCheck,
+    title: "Proven Compliance Expertise",
     points: [
-      "Retirement projections and cashflow modelling",
-      "Insurance needs analysis and comparisons",
-      "OFA/FDS lodgements and compliance docs",
+      "Zero documents failed at audit",
+      "Consistently attain top compliance rankings",
+      "Deep, current knowledge of ASIC requirements",
     ],
-    metric: "2+ years full-cycle",
+    metric: "Zero audit failures",
     color: "#F59E0B",
   },
   {
-    icon: ShieldCheck,
-    title: "Confidentiality Guaranteed",
+    icon: Users,
+    title: "Dedicated Paraplanner Assigned to You",
     points: [
-      "Strict privacy obligations observed",
-      "Secure client data handling at all times",
-      "References available upon request",
+      "Assigned specifically based on your needs, niche, and location",
+      "Backup support ensures your work is never delayed",
+      "Deep understanding of your practice style over time",
     ],
-    metric: "Privacy-first approach",
+    metric: "Your dedicated resource",
     color: "#EF4444",
   },
+  {
+    icon: Globe,
+    title: "Nepal-Based, AEST-Aligned",
+    points: [
+      "Deep knowledge of Australian rules and regulations",
+      "Operates on Australian business hours, Monday to Friday",
+      "React fast, communicate easily, deliver on time",
+    ],
+    metric: "AEST business hours",
+    color: "#06B6D4",
+  },
 ];
-
 
 export default function WhyHireMe() {
   return (
@@ -82,7 +100,7 @@ export default function WhyHireMe() {
           badge="What I Bring"
           title="Why Advisers"
           highlight="Choose Me"
-          subtitle="Six concrete reasons Australian advisory practices trust me with their most important client documents."
+          subtitle="Seven concrete reasons Australian advisory practices trust me with their most important client documents."
         />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -104,9 +122,7 @@ export default function WhyHireMe() {
               </div>
 
               {/* Title */}
-              <h3 className="text-white font-bold text-base mb-3 leading-snug">
-                {s.title}
-              </h3>
+              <h3 className="text-white font-bold text-base mb-3 leading-snug">{s.title}</h3>
 
               {/* Data bullets */}
               <ul className="space-y-1.5 mb-4">

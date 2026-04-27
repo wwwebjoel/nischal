@@ -6,10 +6,10 @@ import { Menu, X, Download } from "lucide-react";
 
 const navLinks = [
   { href: "#about", label: "About" },
+  { href: "#services", label: "Services" },
   { href: "#why-hire-me", label: "Why Me" },
-  { href: "#process", label: "Process" },
-  { href: "#experience", label: "Experience" },
-  { href: "#portfolio", label: "Portfolio" },
+  { href: "#portfolio", label: "Work" },
+  { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -23,7 +23,7 @@ export default function Navbar() {
       setScrolled(window.scrollY > 60);
 
       // Active section detection
-      const sections = ["home", "about", "why-hire-me", "process", "skills", "experience", "portfolio", "education", "contact"];
+      const sections = ["home", "about", "services", "why-hire-me", "our-offering", "process", "skills", "experience", "portfolio", "testimonials", "faq", "education", "contact"];
       for (const id of sections.reverse()) {
         const el = document.getElementById(id);
         if (el && window.scrollY >= el.offsetTop - 120) {
@@ -111,16 +111,13 @@ export default function Navbar() {
 
             {/* Right actions */}
             <div className="flex items-center gap-3">
-              <motion.a
-                href="/cv.pdf"
-                download="Nischal_Khatri_CV.pdf"
-                className="hidden md:flex items-center gap-2 px-4 py-2 rounded-xl border border-[#4A90E2]/30 text-[#4A90E2] text-sm font-medium hover:bg-[#4A90E2]/10 transition-colors"
-                whileHover={{ scale: 1.04 }}
-                whileTap={{ scale: 0.96 }}
+              <span
+                title="CV update in progress"
+                className="hidden md:flex items-center gap-2 px-4 py-2 rounded-xl border border-white/[0.07] text-white/30 text-sm font-medium cursor-not-allowed select-none"
               >
                 <Download size={14} />
                 CV
-              </motion.a>
+              </span>
               <motion.button
                 onClick={() => scrollTo("#contact")}
                 className="hidden md:flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#1E5FBF] to-[#4A90E2] rounded-xl text-white text-sm font-semibold hover:shadow-[0_0_24px_rgba(74,144,226,0.5)] transition-shadow"
@@ -193,14 +190,13 @@ export default function Navbar() {
                 ))}
               </nav>
               <div className="p-5 space-y-3 border-t border-white/[0.06]">
-                <a
-                  href="/cv.pdf"
-                  download="Nischal_Khatri_CV.pdf"
-                  className="flex items-center justify-center gap-2 w-full px-4 py-3 border border-[#4A90E2]/30 rounded-xl text-[#4A90E2] text-sm font-medium"
+                <span
+                  title="CV update in progress"
+                  className="flex items-center justify-center gap-2 w-full px-4 py-3 border border-white/[0.07] rounded-xl text-white/30 text-sm font-medium cursor-not-allowed select-none"
                 >
                   <Download size={14} />
-                  Download CV
-                </a>
+                  CV Coming Soon
+                </span>
                 <button
                   onClick={() => scrollTo("#contact")}
                   className="w-full px-4 py-3 bg-gradient-to-r from-[#1E5FBF] to-[#4A90E2] rounded-xl text-white text-sm font-semibold"
